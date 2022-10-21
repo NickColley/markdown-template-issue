@@ -4,12 +4,12 @@ async function markdown(markdown) {
   const { default: html } = await import("remark-html");
   const { default: directive } = await import("remark-directive");
   const { visit } = await import("unist-util-visit");
-  function replaceWithNunjucks() {
+  function replaceWithLiquid() {
     return (tree) => {
       visit(tree, (node) => {
         if (node.type === "textDirective") {
           node.type = "text";
-          node.value = "{{ 1 + 1 }}";
+          node.value = '{{ "Hello, World." }}';
         }
       });
     };
@@ -18,7 +18,7 @@ async function markdown(markdown) {
   const output = await unified()
     .use(parse)
     .use(directive)
-    .use(replaceWithNunjucks)
+    .use(replaceWithLiquid)
     .use(html)
     .process(markdown);
 
@@ -28,7 +28,4 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary("md", {
     render: (content) => markdown(content),
   });
-  return {
-    markdownTemplateEngine: "njk",
-  };
 };

@@ -1,8 +1,8 @@
 ---
-templateOveride: md, njk
+templateOveride: md, liquid
 ---
 # Markdown
 
-{{ 1 + 1 }}
+{{ "Hello, World" }}
 
 :replaceWithNunjucks
