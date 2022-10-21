@@ -1,8 +1,5 @@
 ---
 templateOveride: md, liquid
 ---
-# Markdown
 
-{{ "Hello, World" }}
-
-:replaceWithLiquid
+Content to render as markdown

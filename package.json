@@ -1,20 +1,10 @@
 {
   "name": "markdown-njk-issue",
   "version": "1.0.0",
-  "description": "",
-  "main": ".eleventy.js",
   "scripts": {
     "start": "eleventy"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^1.0.2",
-    "remark-directive": "^2.0.1",
-    "remark-html": "^15.0.1",
-    "remark-parse": "^10.0.1",
-    "unified": "^10.1.2",
-    "unist-util-visit": "^4.1.1"
+    "@11ty/eleventy": "^1.0.2"
   }
 }
