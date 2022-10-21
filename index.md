@@ -5,4 +5,4 @@ templateOveride: md, liquid
 
 {{ "Hello, World" }}
 
-:replaceWithNunjucks
+:replaceWithLiquid
